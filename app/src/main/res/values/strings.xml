@@ -4,4 +4,5 @@
     <string name="buttonTwo">Button Two</string>
     <string name="buttonThree">Button Three</string>
     <string name="textview">疯狂 ~~~~ 动 ~~~ 物~~~~城，真好~~~~~~~看~~~~~~~~~~呀~~~~~~~~~~</string>
+    <string name="hint">请输入关键字</string>
 </resources>
