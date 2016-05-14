@@ -4,17 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button buttonOne;
-    private Button buttonTwo;
-    private Button buttonThree;
-    private AutoCompleteTextView autoCompleteTextView;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //匿名内部类实现监听
         //初始化控件
+        Button buttonOne;
         buttonOne = (Button) findViewById(R.id.buttonOne);
         //添加监听事件
         buttonOne.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         //外部类实现监听
+        Button buttonTwo;
         buttonTwo = (Button) findViewById(R.id.buttonTwo);
         buttonTwo.setOnClickListener(new MyOnClickListener() {
             public void onClick(View v) {
@@ -42,16 +43,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         //接口方式实现
+        Button buttonThree;
         buttonThree = (Button) findViewById(R.id.buttonThree);
         buttonThree.setOnClickListener(this);
 
         //AutoCompleteTextView
         //初始化控件
+        AutoCompleteTextView autoCompleteTextView;
         autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
         //添加数据源
         String[] resc = {"PEK", "XMN", "SHA", "PPT", "XMU", "CUK", "P1", "P2", "P3", "P4", "p5", "p7", "p8"};
         //添加一个适配器
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, resc);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, resc);
         //控件与适配器绑定
         autoCompleteTextView.setAdapter(adapter);
 
