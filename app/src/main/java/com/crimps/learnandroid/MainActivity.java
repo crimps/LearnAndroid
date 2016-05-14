@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button buttonOne;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         buttonTwo.setOnClickListener(new MyOnClickListener() {
             public void onClick(View v) {
                 super.onClick(v);
-                Log.i("info", "Button two was clicked");
+                Toast.makeText(MainActivity.this, "button two was clicked", Toast.LENGTH_LONG).show();
             }
         });
 
