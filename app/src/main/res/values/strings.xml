@@ -2,4 +2,5 @@
     <string name="app_name">LearnAndroid</string>
     <string name="buttonOne">Button One</string>
     <string name="buttonTwo">Button Two</string>
+    <string name="buttonThree">Button Three</string>
 </resources>

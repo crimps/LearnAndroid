@@ -7,9 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button buttonOne;
     private Button buttonTwo;
+    private Button buttonThree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //接口方式实现
+        buttonThree = (Button) findViewById(R.id.buttonThree);
+        buttonThree.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(MainActivity.this, "Button three was clicked", Toast.LENGTH_SHORT).show();
     }
 }
 
